@@ -1,0 +1,208 @@
+{% extends 'myshop/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="hero_section">
+    <div class="row ">
+        <h5 class="bg-dark text-light"><marquee behavior="" direction="left"><span class="text-danger"     >Abdul Samad</span>, Phone: 9494549704, Rayachoty opposite(saibaba temple)</marquee></h5>
+
+        <div style="height:75vh;margin-top: -8px;" class="col-sm-6   text-center">
+            <div style="height: 100vh; width:100%" ><img class="mt-5"   src="{% static 'myshop/images/hero1.jpg' %}" alt="">
+            </div>                          
+        </div>
+
+        <div style=" height:75vh;margin-top: -8px;" class="col-sm-6   text-center bg-danger">
+            
+            <div style="font-family: 'Shrikhand', cursive;"  class=" text-dark">
+                <h2 style="font-size: 55px;font-weight: bolder;margin-top: 22%;">POWERTOOLS</h2>
+                <h2 style="font-size: 55px;font-weight: bolder;">SERVICES </h2>
+                <!-- <h2 style="font-size: 55px;font-weight: bolder;">Better Life..</h2> -->
+                <a href="{% url 'register' %}" class="btn btn-light mt-4">Ask Any Question</a>&nbsp;&nbsp;
+                <a href="{% url 'contact' %}" class="btn text-light btn-outline-dark px-5 mt-4">&nbsp;Contact&nbsp;</a>
+
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- products section -->
+<section class="product_section">
+    <h3 style="font-weight: bolder;font-family: 'Shrikhand', cursive;margin-top: 5px;border-radius: 10px;letter-spacing: 2px;" class="text-danger text-center bg-dark p-1 "> OUR PRODUCTS</h3>
+    <div class="container ">        
+        <div class="row text- my-2">
+            <!-- card1 -->
+            <div class="col-sm-4 ">
+                <div class="card  bg-success text-light" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'myshop/images/img1.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Heavy duty Impact Drill Machine <span class="text-danger">3367/-</span></h5>
+                      <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis.</p>
+                      <a href="#" class="btn btn-danger form-control">More Info</a>
+                      <a href="#" class="btn btn-outline-light form-control mt-1">Add To Cart</a>
+
+                    </div>
+                  </div>
+            </div>
+
+             <!-- card2 -->
+             <div class="col-sm-4 ">
+                <div class="card  bg-dark text-light" style="width: 18rem;">
+                    <img height="220" class="card-img-top" src="{% static 'myshop/images/img2.jpeg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="ard-title">Heavy duty Impact Drill Machine <span class="text-danger">3367/-</span></h5>
+                      <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis.</p>
+                      <a href="#" class="btn btn-danger form-control">More Info</a>
+                      <a href="#" class="btn btn-outline-light form-control mt-1">Add To Cart</a>
+                    </div>
+                  </div>
+            </div>
+             <!-- card3 -->
+             <div class="col-sm-4 ">
+                <div class="card  bg-success text-light" style="width: 18rem;">
+                    <img height="220" class="card-img-top" src="{% static 'myshop/images/img5.jpeg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Heavy duty Impact Grinding Machine <span class="text-danger">4467/-</span></h5>
+                      <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis. </p>
+                      <a href="#" class="btn btn-danger form-control">More Info</a>
+                      <a href="#" class="btn btn-outline-light form-control mt-1">Add To Cart</a>
+                    </div>
+                  </div>
+            </div>
+
+
+        </div>
+
+        <div class="row text-center my-2">
+            <!-- card4 -->
+            <div class="col-sm-4 ">
+                <div class="card  bg-dark text-light" style="width: 18rem;">
+                    <img height="220" class="card-img-top" src="{% static 'myshop/images/img4.jpeg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Heavy duty Impact Cutting Machine <span class="text-danger">5550/-</span></h5>
+                      <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis.</p>
+                      <a href="#" class="btn btn-danger form-control">More Info</a>
+                      <a href="#" class="btn btn-outline-light form-control mt-1">Add To Cart</a>
+
+                    </div>
+                  </div>
+            </div>
+
+             <!-- card5 -->
+             <div class="col-sm-4 ">
+                <div class="card  bg-success text-light" style="width: 18rem;">
+                    <img height="220" class="card-img-top" src="{% static 'myshop/images/img3.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Heavy duty Impact Drill Machine <span class="text-danger">3367/-</span></h5>
+                      <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis.</p>
+                      <a href="#" class="btn btn-danger form-control">More Info</a>
+                      <a href="#" class="btn btn-outline-light form-control mt-1">Add To Cart</a>
+                    </div>
+                  </div>
+            </div>
+             <!-- card6 -->
+             <div class="col-sm-4 ">
+                <div class="card  bg-dark text-light" style="width: 18rem;">
+                    <img height="220" class="card-img-top" src="{% static 'myshop/images/img6.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Heavy duty Impact Smoothing Machine <span class="text-danger">8750/-</span></h5>
+                      <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis. </p>
+                      <a href="#" class="btn btn-danger form-control">More Info</a>
+                      <a href="#" class="btn btn-outline-light form-control mt-1">Add To Cart</a>
+                    </div>
+                  </div>
+            </div>
+
+
+        </div>
+
+        <div class="row text-center my-2">
+            <!-- card7 -->
+            <div class="col-sm-4 ">
+                <div class="card  bg-success text-light" style="width: 18rem;">
+                    <img height="220" class="card-img-top" src="{% static 'myshop/images/img7.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Heavy duty Impact Cutting Machine <span class="text-danger">5550/-</span></h5>
+                      <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis.</p>
+                      <a href="#" class="btn btn-danger form-control">More Info</a>
+                      <a href="#" class="btn btn-outline-light form-control mt-1">Add To Cart</a>
+
+                    </div>
+                  </div>
+            </div>
+
+             <!-- card8 -->
+             <div class="col-sm-4 ">
+                <div class="card  bg-dark text-light" style="width: 18rem;">
+                    <img height="220" class="card-img-top" src="{% static 'myshop/images/img8.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Heavy duty Impact Drill Machine <span class="text-danger">3367/-</span></h5>
+                      <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis.</p>
+                      <a href="#" class="btn btn-danger form-control">More Info</a>
+                      <a href="#" class="btn btn-outline-light form-control mt-1">Add To Cart</a>
+                    </div>
+                  </div>
+            </div>
+             <!-- card9 -->
+             <div class="col-sm-4 ">
+                <div class="card  bg-success text-light" style="width: 18rem;">
+                    <img height="220" class="card-img-top" src="{% static 'myshop/images/img9.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Heavy duty Impact Smoothing Machine <span class="text-danger">8750/-</span></h5>
+                      <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis. </p>
+                      <a href="#" class="btn btn-danger form-control">More Info</a>
+                      <a href="#" class="btn btn-outline-light form-control mt-1">Add To Cart</a>
+                    </div>
+                  </div>
+            </div>
+
+
+        </div>
+    </div>
+      
+</section>
+
+<!-- end products section -->
+
+<!-- service section -->
+<section class="service_section"> 
+  <h3 style="font-weight: bolder;font-family: 'Shrikhand', cursive;
+  border-radius: 10px;letter-spacing: 2px;" class="text-danger text-center bg-dark p-1 "> OUR SERVICES</h3>
+  <div class="container">
+    <div class="row my-3">
+      <div class="col-sm-6">
+        <img style="margin-top: 5px;" src="{% static 'myshop/images/a1.jpg' %}" alt="">
+      </div>
+
+      <div class="col-sm-6">
+        <h4 style="font-weight: bolder;font-family: 'Shrikhand', cursive;margin-top: 5px;border-radius: 20px;letter-spacing: 2px;" class="text-light text-center bg-dark p-1 d-inline-block w-auto p-2">Quality</h4>
+        <p style="text-align: justify;" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita alias magni reiciendis sit doloribus a, necessitatibus tempora sapiente sunt blanditiis nostrum obcaecati eos eaque nulla qui quas similique fugiat ullam harum! Dolorum delectus quos quibusdam laboriosam reiciendis impedit reprehenderit officiis sed quo dolorem incidunt esse omnis fuga unde, tempora, inventore, architecto nisi distinctio molestiae nesciunt sit dolor laudantium obcaecati quaerat. Amet eveniet provident sunt soluta iure enim voluptatem excepturi veritatis minima quam facere nesciunt, quasi dicta natus? </p>
+      </div>
+    </div>
+    <div class="row my-3">
+
+      <div class="col-sm-6">
+        <h4 style="font-weight: bolder;font-family: 'Shrikhand', cursive;margin-top: 5px;border-radius: 20px;letter-spacing: 2px;" class="text-light text-center bg-dark p-1 d-inline-block w-auto p-2"> Innovative</h4>
+        <p style="text-align: justify;" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita alias magni reiciendis sit doloribus a, necessitatibus tempora sapiente sunt blanditiis nostrum obcaecati eos eaque nulla qui quas similique fugiat ullam harum! Dolorum delectus quos quibusdam laboriosam reiciendis impedit reprehenderit officiis sed quo dolorem incidunt esse omnis fuga unde, tempora, inventore, architecto nisi distinctio molestiae nesciunt sit dolor laudantium obcaecati quaerat. Amet eveniet provident sunt soluta iure enim voluptatem excepturi veritatis minima quam facere nesciunt, quasi dicta natus? </p>
+      </div>
+
+      <div class="col-sm-6">
+        <img style="margin-top: 5px;" src="{% static 'myshop/images/a2.jpeg' %}" alt="">
+      </div>
+    </div>
+
+    <div class="row my-3">
+      <div class="col-sm-6">
+        <img style="margin-top: 5px;" src="{% static 'myshop/images/a6.jpg' %}" alt="">
+      </div>
+
+      <div class="col-sm-6">
+        <h4 style="font-weight: bolder;font-family: 'Shrikhand', cursive;margin-top: 5px;border-radius: 20px;letter-spacing: 2px;" class="text-light text-center bg-dark p-1 d-inline-block w-auto p-2"> We Creative</h4>
+        <p style="text-align: justify;" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita alias magni reiciendis sit doloribus a, necessitatibus tempora sapiente sunt blanditiis nostrum obcaecati eos eaque nulla qui quas similique fugiat ullam harum! Dolorum delectus quos quibusdam laboriosam reiciendis impedit reprehenderit officiis sed quo dolorem incidunt esse omnis fuga unde, tempora, inventore, architecto nisi distinctio molestiae nesciunt sit dolor laudantium obcaecati quaerat. Amet eveniet provident sunt soluta iure enim voluptatem excepturi veritatis minima quam facere nesciunt, quasi dicta natus? </p>
+      </div>
+    </div>    
+  </div>
+</section>
+
+{% endblock content %}

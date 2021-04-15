@@ -1,0 +1,39 @@
+{% extends 'myshop/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    {% if messages %}
+    {% for message in messages %}
+    <p class="alert alert-success">{{message}}</p>
+    {% endfor %}
+    {% endif %}
+
+    <div class="container">
+
+    <div class="row my-5">
+        <div class="col-sm-6 offset-3">
+            <h3 style="border-radius: 5px;" class="text-center text-light p-1 bg-dark">Staff Login</h3>
+            <form  method="POST" class="text-dark fw-bold" >
+                {% csrf_token %}
+                <label for="username">Username</label>
+                <input type="text" name="username" class="form-control">
+
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control">
+
+                <input class="btn bg-dark text-light mt-3 form-control" type="submit" value="SUBMIT">
+                
+
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+{% block footer %}
+{% include 'myshop/footer.html' %}
+{% endblock footer %}
+

@@ -1,0 +1,40 @@
+{% extends 'myshop/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    {% if messages %}
+    {% for message in messages %}
+    <p class="alert alert-success">{{message}}</p>
+    {% endfor %}
+    {% endif %}
+
+    <div class="container">
+
+    <div class="row my-5">
+        <div class="col-sm-6 offset-3">
+            <h3 style="border-radius: 5px;" class="text-center text-light p-1 bg-dark">Register Form</h3>
+            <form  method="POST" class="text-light" novalidate>
+                {% csrf_token %}
+                {% for fm in form %}
+                
+                <div  class="form-group text-dark">
+                    {{fm.label_tag}} {{fm}} <span id="form_errors">{{fm.errors|striptags}} </span>
+                </div> 
+                
+                {% endfor %}
+                <input class="btn bg-dark text-light mt-3 form-control" type="submit" value="SUBMIT">
+                <a href="{% url 'user_login' %}" class="btn btn-danger form-control">Login</a>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+{% block footer %}
+{% include 'myshop/footer.html' %}
+{% endblock footer %}
+

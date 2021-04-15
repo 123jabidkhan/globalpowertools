@@ -1,0 +1,39 @@
+{% extends 'myshop/base.html' %}
+{% load static %}
+
+{% block navigation %}
+{% include 'myshop/user_navigation.html' %}
+{% endblock navigation %}
+
+
+{% block content %}
+{% if messages %}
+    {% for message in messages %}
+    <p class="alert alert-success">{{message}}</p>
+    {% endfor %}
+    {% endif %}
+<h5 class="bg-dark text-success text-center">Welcome...!! {{user.username}}</h5>
+
+<div class="container">
+
+    <div class="row my-5">
+        <div class="col-sm-6 offset-3">
+            <h3 style="border-radius: 5px;" class="text-center text-light p-1 bg-dark">Query Form</h3>
+            <form method="POST"  novalidate>
+                {% csrf_token %}
+                {% for fm in form %}
+                
+                <div  class="form-group text-dark fw-bold">
+                    {{fm.label_tag}} {{fm}} <span id="form_errors">{{fm.errors|striptags}} </span>
+                </div> 
+                
+                {% endfor %}
+                <input class="btn bg-dark text-light mt-3 form-control" type="submit" value="SEND US">
+                
+
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

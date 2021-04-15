@@ -1,0 +1,41 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Alfa+Slab+One&family=Monoton&family=Niconne&family=Shrikhand&display=swap" rel="stylesheet">
+    <!-- fontawesome CSS -->
+    <link rel="stylesheet" href="{% static 'myshop/css/all.css' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'myshop/css/bootstrap.css' %}">
+    <!-- local CSS file -->
+    <link rel="stylesheet" href="{% static 'myshop/css/style.css' %}">
+    <title>Document</title>
+    
+
+  </head>
+  <body>
+    {% block navigation %}
+    {% include 'myshop/home_navigation.html' %}
+    {% endblock navigation %}
+
+    {% block content %}
+        <section class="hero_section"></section>   
+    {% endblock content %}
+
+    {% block footer %}
+    {% include 'myshop/footer.html' %}
+    {% endblock footer %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap popperJS -->
+    <script src="{% static 'myshop/js/all.js' %}"></script>
+    <script src="{% static 'myshop/js/jquery.js' %}"></script>
+    <script src="{% static 'myshop/js/.js' %}"></script>
+    <script src="{% static 'myshop/js/bootstrap.js' %}"></script>
+
+  </body>
+</html>

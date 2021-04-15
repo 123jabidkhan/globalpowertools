@@ -1,0 +1,57 @@
+{% extends 'myshop/base.html' %}
+{% load static %}
+
+{% block navigation %}
+{% include 'myshop/admin_navigation.html' %}
+{% endblock navigation %}
+
+{% block content %}
+
+    {% if messages %}
+    {% for message in messages %}
+    <p class="alert alert-success">{{message}}</p>
+    {% endfor %}
+    {% endif %}
+
+    <div class="container ">
+        <h5 style="border-radius: 5px;" class="text-center text-success p-1 bg-dark">Welcome To Adminpanel</h5>
+    <div class="row my-5">
+        <div class="col-sm-12">
+            <table style="margin-top: -35px;" class="table table-hover ">
+                <thead>
+                    <tr style="background-color: black;" class="text-success text-center">
+                    <th >S.No</th>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Address</th>
+                    <th>Actions</th>
+
+
+                    </tr>
+                </thead>
+                <tbody >
+                    {% for query in querys %}
+                    <tr class="text-center text-light bg-dark fw-bold bg-da ">
+                        <td>{{forloop.counter}}</td>
+                        <td >{{query.name}}</td>
+                        <td>{{query.phone}}</td>
+                        <td>{{query.address}}</td>
+                        <td>
+                            <a onclick="return confirm('Really want to delete ??')" href="{% url 'user_delete' query.id %}" class="btn btn-outline-danger btn-sm">Delete</a>
+
+                            <a  href="#" class="btn btn-outline-light btn-sm">&nbspEdit&nbsp</a>
+                        </td>
+                    </tr>
+                    {% endfor %}                                       
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+{% block footer %}
+{% include 'myshop/footer.html' %}
+{% endblock footer %}
+
